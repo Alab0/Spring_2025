@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>ЭлектроМаркет</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <nav>
+    <button onclick="showTab('home')">Главная</button>
+    <button onclick="showTab('cart')">Корзина <span id="cart-count">0</span></button>
+  </nav>
+
+  <section class="tab" id="home">
+    <h1>Добро пожаловать в ЭлектроМаркет!</h1>
+    <div class="search-box">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Поиск товаров..."
+        oninput="searchProducts()" />
+    </div>
+
+    <h2 style="margin-top:40px;">Наши товары</h2>
+    <div id="product-list">
+      <div class="product" data-name="Смартфон X100" data-price="25000">
+        <h3>Смартфон X100</h3>
+        <p>Цена: 25 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Ноутбук ProBook" data-price="75000">
+        <h3>Ноутбук ProBook</h3>
+        <p>Цена: 75 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Наушники BassBoost" data-price="7000">
+        <h3>Наушники BassBoost</h3>
+        <p>Цена: 7 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Телевизор SmartView" data-price="55000">
+        <h3>Телевизор SmartView</h3>
+        <p>Цена: 55 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Планшет TabPro" data-price="30000">
+        <h3>Планшет TabPro</h3>
+        <p>Цена: 30 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Умные часы FitTime" data-price="15000">
+        <h3>Умные часы FitTime</h3>
+        <p>Цена: 15 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Камера ZoomShot" data-price="42000">
+        <h3>Камера ZoomShot</h3>
+        <p>Цена: 42 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Монитор UltraWide" data-price="28000">
+        <h3>Монитор UltraWide</h3>
+        <p>Цена: 28 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Клавиатура RGB" data-price="6000">
+        <h3>Клавиатура RGB</h3>
+        <p>Цена: 6 000₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Мышь SpeedClick" data-price="3500">
+        <h3>Мышь SpeedClick</h3>
+        <p>Цена: 3 500₽</p>
+        <div class="control-area"></div>
+      </div>
+
+      <div class="product" data-name="Колонка BoomBox" data-price="8500">
+        <h3>Колонка BoomBox</h3>
+        <p>Цена: 8 500₽</p>
+        <div class="control-area"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab" id="cart" style="display:none">
+    <h2>Корзина</h2>
+    <div id="cart-items"></div>
+    <p id="empty-cart">Ваша корзина пуста.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
